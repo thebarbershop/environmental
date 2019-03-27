@@ -1,0 +1,13 @@
+#!/bin/sh
+
+original_clipboard=$(pbpaste)
+
+echo $CONDA_DEFAULT_ENV | pbcopy
+
+osascript << EOT
+tell application "System Events" to keystroke "n" using {command down}
+delay 0.1
+tell application "Terminal" to do script "conda activate $(pbpaste)" in front window
+EOT
+
+echo $original_clipboard | pbcopy
