@@ -80,3 +80,11 @@ To open a new terminal tab with the same environment at the same directory,
 ```bash
 (my-conda-environment) current-directory $ tab
 ```
+
+## Contribute
+
+I don't have any plan to import this tool to any other than the ones I am using. Feel free to fork and modify to fit your own system. I would deeply appreciate if you send me a pull request with your addition.
+
+## License
+
+This software is [Unlicenced](https://unlicense.org/). Do whatever you want with it, and I am not liable for any consequences.
