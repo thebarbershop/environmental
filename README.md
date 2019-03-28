@@ -1,23 +1,33 @@
 # environmental
 
-When I'm working in a conda environment, I am too lazy to
+When I'm working in a Python virtual environment, I am too lazy to
 
 <!-- markdownlint-disable no-inline-html -->
 
 1. Open a new terminal with <kbd>⌘ Command</kbd>+<kbd>N</kbd> or <kbd>⌘ Command</kbd>+<kbd>T</kbd> (Or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>/<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> or whatever combination of keys you use.)
-2. type `conda activate my-conda-environment`.
+2. type `conda activate my-environment`.
 
 <!-- markdownlint-enable no-inline-html -->
 
 So I created two shell commands, `window` and `tab`.
 
-Currently supports macOS and Linux (Ubuntu).
+## Supported environments
+
+### macOS
+
+I have developed and tested this tool on __macOS mojave.__
+
+The tool is available for __conda__ environments.
+
+### Linux
+
+I have developed and tested this tool on __Ubuntu 18.04 with GNOME 3.28.2.__
+
+The tool is available for __conda__ and __virtualenv__ environments.
 
 ## Install
 
-### macOSs
-
-I have developed and tested this tool on __macOS mojave.__
+### Install on macOS
 
 1. Clone the repo.
 2. Set permission to run commands.
@@ -25,8 +35,8 @@ I have developed and tested this tool on __macOS mojave.__
 
 ```bash
 git clone https://github.com/thebarbershop/environmental.git
-sudo chmod +x environmental/mac/*
-sudo cp environmental/mac/* /usr/local/bin/
+sudo chmod +x environmental/mac/conda/*
+sudo cp environmental/mac/conda/* /usr/local/bin/
 ```
 
 Now you may delete the downloaded files, if you don't want to keep them around.
@@ -35,14 +45,12 @@ Now you may delete the downloaded files, if you don't want to keep them around.
 rm -r environmental/
 ```
 
-### Linux Users
+### Install on Linux
 
-I have developed and tested this tool on __Ubuntu 18.04 with GNOME 3.28.2.__ To use this tool, you need to install the following two tools.
+To use this tool, you need to install the three extra tools, xdotool, xclip, and wmctrl.
 
 ```bash
-sudo apt install xdotool
-sudo apt install xclip
-sudo apt install wmctrl
+sudo apt install xdotool xclip wmctrl
 ```
 
 Then,
@@ -53,9 +61,11 @@ Then,
 
 ```bash
 git clone https://github.com/thebarbershop/environmental.git
-sudo chmod +x environmental/linux/*
-sudo cp environmental/linux/* /usr/local/bin/
+sudo chmod +x environmental/linux/conda/*
+sudo cp environmental/linux/conda/* /usr/local/bin/
 ```
+
+If you use __virtualenv__ instead of __conda__, replace the path accordingly for the last two commands.
 
 Now you may delete the downloaded files, if you don't want to keep them around.
 
@@ -70,7 +80,7 @@ rm -r environmental/
 To open a new terminal window with the same environment at the same directory,
 
 ```bash
-(my-conda-environment) current-directory $ window
+(my-environment) current-directory $ window
 ```
 
 ### tab
@@ -78,13 +88,15 @@ To open a new terminal window with the same environment at the same directory,
 To open a new terminal tab with the same environment at the same directory,
 
 ```bash
-(my-conda-environment) current-directory $ tab
+(my-environment) current-directory $ tab
 ```
-
-## Contribute
-
-I don't have any plan to import this tool to any other than the ones I am using. Feel free to fork and modify to fit your own system. I would deeply appreciate if you send me a pull request with your addition.
 
 ## License
 
 This software is [Unlicenced](https://unlicense.org/). Do whatever you want with it, and I am not liable for any consequences.
+
+## Note
+
+I don't have any plan to import this tool for any other OS or environment manager than the ones I am using. (But I may someday, whenever I feel like it.)
+
+So feel free to fork and modify to fit your own system. I would deeply appreciate if you send me a pull request with your addition.
