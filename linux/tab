@@ -1,0 +1,15 @@
+#!/bin/sh
+
+original_clipboard=$(xclip -o)
+
+echo $CONDA_DEFAULT_ENV | xclip
+
+WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
+xdotool windowfocus $WID
+xdotool key ctrl+shift+t
+wmctrl -i -a $WID
+sleep 0.2
+xdotool type --delay 1 --clearmodifiers "conda activate $(xclip -o)"
+xdotool key Return;
+
+echo $original_clipboard | xclip
