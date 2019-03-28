@@ -97,7 +97,7 @@ To open a new terminal tab with the same environment at the same directory,
 
 ## License
 
-This software is [Unlicenced](https://unlicense.org/). Do whatever you want with it, and I am not liable for any consequences.
+This software is [Unlicenced](https://unlicense.org/). Do whatever you want with it, and I am not liable for any consequences. For more, read [LICENSE](LICENSE).
 
 ## Note
 
