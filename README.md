@@ -2,12 +2,8 @@
 
 When I'm working in a Python virtual environment, I am too lazy to
 
-<!-- markdownlint-disable no-inline-html -->
-
 1. Open a new terminal window/tab with some hotkeys and
 2. Type `conda activate my-environment`.
-
-<!-- markdownlint-enable no-inline-html -->
 
 So I created two shell commands, `window` and `tab`.
 
@@ -45,6 +41,10 @@ Now you may delete the downloaded files, if you don't want to keep them around.
 rm -r environmental/
 ```
 
+<!-- markdownlint-disable no-inline-html -->
+The script emulates <kbd>⌘ Command</kbd>+<kbd>N</kbd> and <kbd>⌘ Command</kbd>+<kbd>T</kbd> to open a new window/terminal. You have to fix line 8 of each script, if you use a different combination of keys.
+<!-- markdownlint-enable no-inline-html -->
+
 ### Install on Linux
 
 To use this tool, you need to install the three extra tools, xdotool, xclip, and wmctrl.
@@ -72,6 +72,10 @@ Now you may delete the downloaded files, if you don't want to keep them around.
 ```bash
 rm -r environmental/
 ```
+
+<!-- markdownlint-disable no-inline-html -->
+The script emulates <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> and <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> to open a new window/terminal. You have to fix line 10 of `window` and line 11 of `tab`, if you use a different combination of keys.
+<!-- markdownlint-enable no-inline-html -->
 
 ## How to use
 
