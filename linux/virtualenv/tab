@@ -1,0 +1,14 @@
+#!/bin/sh
+
+original_clipboard=$(xclip -o)
+
+echo $VIRTUAL_ENV | xclip
+
+WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
+xdotool windowfocus $WID
+xdotool key ctrl+shift+t
+wmctrl -i -a $WID
+xdotool type --delay 0.5 --clearmodifiers "source $(xclip -o)/bin/activate"
+xdotool key Return;
+
+echo $original_clipboard | xclip
