@@ -4,8 +4,8 @@ When I'm working in a Python virtual environment, I am too lazy to
 
 <!-- markdownlint-disable no-inline-html -->
 
-1. Open a new terminal with <kbd>⌘ Command</kbd>+<kbd>N</kbd> or <kbd>⌘ Command</kbd>+<kbd>T</kbd> (Or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>/<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> or whatever combination of keys you use.)
-2. type `conda activate my-environment`.
+1. Open a new terminal window/tab with some hotkeys and
+2. Type `conda activate my-environment`.
 
 <!-- markdownlint-enable no-inline-html -->
 
